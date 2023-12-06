@@ -1,10 +1,14 @@
 class Api::V1::HeroesController < ApplicationController
 
-  #before_action :set_hero, only: %i[] #show update destroy
+  before_action :set_hero, only: %i[show] #show update destroy
 
   def index
     @heroes = Hero.all 
     render json: @heroes
+  end
+
+  def show
+    render json: @hero
   end
 
 private
