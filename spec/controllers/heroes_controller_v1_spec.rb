@@ -27,5 +27,14 @@ RSpec.describe Api::V1::HeroesController, type: :controller do
       expect(response).to have_http_status(201)
     end
   end
+
+  describe 'PATCH /api/v1/heroes/id' do
+    it 'Consegue atualizar um hero e retornar status 200?' do
+      hero = Hero.last
+      patch :update, params: {hero: {name: 'xavier', description: 'mente poderosa'}, id: hero.id}
+      expect(response.body).to include_json(name: 'xavier')
+      expect(response).to have_http_status(200)
+    end
+  end
   
 end
