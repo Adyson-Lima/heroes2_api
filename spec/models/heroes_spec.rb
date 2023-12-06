@@ -6,7 +6,7 @@ RSpec.describe Hero, type: :model do
 
   describe 'Testes de preenchimento do model Hero' do
     it 'name consegue ser preenchido?' do
-      @hero.name = ''
+      @hero.name = 'spiderman'
       expect(@hero.name).to eq('spiderman')
     end    
   end
