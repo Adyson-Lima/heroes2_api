@@ -12,7 +12,7 @@ RSpec.describe Hero, type: :model do
     end    
 
     it 'description consegue ser preenchido?' do
-      @hero.description = ''
+      @hero.description = 'inimigo do venon'
       expect(@hero.description).to eq('inimigo do venon')
     end
 
