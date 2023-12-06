@@ -26,6 +26,11 @@ RSpec.describe Hero, type: :model do
       expect(@hero).to be_valid
     end
 
+    it 'hero invalido com campos obrigatorios não preenchidos?' do
+      hero = Hero.new
+      expect(hero).to be_valid
+    end
+
   end
 
 end
