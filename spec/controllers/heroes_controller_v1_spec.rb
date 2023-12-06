@@ -19,5 +19,13 @@ RSpec.describe Api::V1::HeroesController, type: :controller do
       expect(response).to have_http_status(200)
     end    
   end
+
+  describe 'POST /api/v1/heroes' do
+    it 'Consegue criar um hero e retornar status 201?' do
+      post :create, params: {hero: {name: 'vampira', description: 'parasita'}, format: :json}
+      expect(response.body).to include_json(name: 'vampira')
+      expect(response).to have_http_status(201)
+    end
+  end
   
 end
