@@ -1,6 +1,6 @@
 class Api::V1::HeroesController < ApplicationController
 
-  before_action :set_hero, only: %i[show update] #show update destroy
+  before_action :set_hero, only: %i[show update destroy] #show update destroy
 
   def index
     @heroes = Hero.all 
@@ -26,6 +26,10 @@ class Api::V1::HeroesController < ApplicationController
     else
       render json: @hero.errors, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @hero.destroy!
   end
 
 private
