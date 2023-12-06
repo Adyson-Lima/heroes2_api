@@ -36,5 +36,14 @@ RSpec.describe Api::V1::HeroesController, type: :controller do
       expect(response).to have_http_status(200)
     end
   end
+
+  describe 'DELETE /api/v1/heroes/id' do
+    it 'Consegue excluir um hero e retornar status 204?' do
+      hero = Hero.last
+      delete :destroy, params: {id: hero.id}
+      expect(Hero.all).not_to include(hero)
+      expect(response).to have_http_status(204)
+    end
+  end
   
 end
