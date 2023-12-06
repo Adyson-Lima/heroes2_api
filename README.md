@@ -1,15 +1,15 @@
 # API REST "heroes2_api", desenvolvida em Ruby on Rails, com versionamento de recursos para treino de programação em Ruby on Rails.
 
 ## Endpoints da API
--GET: localhost/api/v1/heroes2
+-GET: localhost/api/v1/heroes
 
--GET: localhost/api/v1/heroes2/id
+-GET: localhost/api/v1/heroes/id
 
--POST: localhost/api/v1/heroes2
+-POST: localhost/api/v1/heroes
 
--PATCH: localhost/api/v1/heroes2/id
+-PATCH: localhost/api/v1/heroes/id
 
--DELETE: localhost/api/v1/heroes2/id
+-DELETE: localhost/api/v1/heroes/id
 
 # Tecnologias utilizadas
 
