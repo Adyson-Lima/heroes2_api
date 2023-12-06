@@ -11,5 +11,13 @@ RSpec.describe Api::V1::HeroesController, type: :controller do
       expect(response).to have_http_status(200)
     end
   end
+
+  describe 'GET /api/v1/heroes/id' do
+    it 'Consegue listar um hero especifico e retornar status 200?' do
+      get :show, params: {id: @hero.id}
+      expect(response.body).to include_json(id: @hero.id)
+      expect(response).to have_http_status(200)
+    end    
+  end
   
 end
