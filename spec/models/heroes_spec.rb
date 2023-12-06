@@ -18,4 +18,14 @@ RSpec.describe Hero, type: :model do
 
   end
 
+  describe 'Testes de validação do model Hero' do
+
+    it 'hero valido com campos obrigatorios preenchidos?' do
+      @hero.name = ''
+      @hero.description = ''
+      expect(@hero).to be_valid
+    end
+
+  end
+
 end
